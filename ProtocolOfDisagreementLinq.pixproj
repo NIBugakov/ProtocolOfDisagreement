@@ -7,6 +7,10 @@
       <IsMain>true</IsMain>
       <Path>main.pix</Path>
     </ProjectFileItem>
+    <ProjectFileItem z:Id="i3">
+      <IsMain>false</IsMain>
+      <Path>Data\acts — копия.xlsx</Path>
+    </ProjectFileItem>
   </Files>
   <MasterUploadId i:nil="true" />
   <Name>ProtocolOfDisagreementLinq</Name>
