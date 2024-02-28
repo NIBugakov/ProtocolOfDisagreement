@@ -11,6 +11,10 @@
       <IsMain>false</IsMain>
       <Path>Data\acts — копия.xlsx</Path>
     </ProjectFileItem>
+    <ProjectFileItem z:Id="i4">
+      <IsMain>false</IsMain>
+      <Path>TableOptimization.pix</Path>
+    </ProjectFileItem>
   </Files>
   <MasterUploadId i:nil="true" />
   <Name>ProtocolOfDisagreementLinq</Name>
