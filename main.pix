@@ -552,7 +552,17 @@
     row_new["Тип"] = Regex.Match(row["Документ"].ToString(),@"^(\s*[A-я]+)+");
     row_new["Дата"] = Regex.Match(row["Документ"].ToString(),@"\d{2}\.\d{2}\.\d{2,4}");
     row_new["Номер"] = (Regex.Match(row["Документ"].ToString(),@"\([A-я]*(\d+)")).Groups[1].ToString().TrimStart('0');
+    if(row["Дебет"].ToString() == "")
+    {
+    row_new["Дебет"] = "0";
+    }
+    else
     row_new["Дебет"] = row["Дебет"].ToString();
+    if(row["Кредит"].ToString() == "")
+    {
+    row_new["Кредит"] = "0";
+    }
+    else
     row_new["Кредит"] = row["Кредит"].ToString();
     return row_new;
 }
