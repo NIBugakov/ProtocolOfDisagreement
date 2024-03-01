@@ -15,6 +15,10 @@
       <IsMain>false</IsMain>
       <Path>TableOptimization.pix</Path>
     </ProjectFileItem>
+    <ProjectFileItem z:Id="i5">
+      <IsMain>false</IsMain>
+      <Path>FindingErrors.pix</Path>
+    </ProjectFileItem>
   </Files>
   <MasterUploadId i:nil="true" />
   <Name>ProtocolOfDisagreementLinq</Name>

@@ -1,0 +1,660 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script xmlns:i="http://www.w3.org/2001/XMLSchema-instance" z:Id="i1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/" xmlns="http://schemas.datacontract.org/2004/07/BR.Logic">
+  <CompilationType>CSharp</CompilationType>
+  <Description>Новый скрипт без наполнения.</Description>
+  <Id>69edd6df-5170-46c2-ad12-afd7584979f9</Id>
+  <Logic z:Id="i2" i:type="ExecutedStep">
+    <Childs>
+      <AbstractStep z:Id="i3" i:type="CommentStep">
+        <Childs />
+        <Id>7d33cc04-34da-47f9-b270-d51bb258c045</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues />
+        <SelectedOptionId i:nil="true" />
+        <Text>Описание cкрипта:
+Скрипт сравнивает таблицы 
+(котору сравнивают: in_dt_sampleFrom) 
+(c которой сравнивают: in_dt_sampleTo) 
+и получает из них таблицы ,отобранные по исключениям.
+
+1-ое исключение: бизнес ошибка 
+2-ое исключение:не совпадает ключ {дата + номер договора}
+3-ое исключение:</Text>
+      </AbstractStep>
+      <AbstractStep z:Id="i4" i:type="CommentStep">
+        <Childs />
+        <Id>ba60219e-eadf-403e-917d-3987a76a1228</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues />
+        <SelectedOptionId i:nil="true" />
+        <Text>Переменные ヾ(⌐■_■)ノ♪</Text>
+      </AbstractStep>
+      <AbstractStep z:Id="i5" i:type="ExecutedStep">
+        <Childs />
+        <Id>bd1dc6bd-9368-48f0-80f3-f374d1bbd816</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i6">
+            <PropertyName>InitialTable</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.Collections" i:type="d7p1:DataTableSettings">
+              <d7p1:Table>
+                <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+                  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="DataTableSettingsTable" msdata:UseCurrentLocale="true">
+                    <xs:complexType>
+                      <xs:choice minOccurs="0" maxOccurs="unbounded">
+                        <xs:element name="DataTableSettingsTable">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="НомерСтроки" type="xs:string" minOccurs="0" />
+                              <xs:element name="Дата" type="xs:string" minOccurs="0" />
+                              <xs:element name="Номер" type="xs:string" minOccurs="0" />
+                              <xs:element name="Дебет" type="xs:string" minOccurs="0" />
+                              <xs:element name="Кредит" type="xs:string" minOccurs="0" />
+                              <xs:element name="Разность" type="xs:string" minOccurs="0" />
+                              <xs:element name="Разногласия" type="xs:string" minOccurs="0" />
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:choice>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:schema>
+                <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" />
+              </d7p1:Table>
+            </_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i7">
+            <PropertyName>BaseDataTable</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>dt_comparisonResult1</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Таблица для хранения первго типа исключений</Text>
+        <_activityFullName>Activities.BaseCollections.DT.CreateTable</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i8" i:type="ExecutedStep">
+        <Childs />
+        <Id>1d789002-fa7f-4bb4-b634-2c8e75d383c0</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i9">
+            <PropertyName>InitialTable</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.Collections" i:type="d7p1:DataTableSettings">
+              <d7p1:Table>
+                <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+                  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="DataTableSettingsTable" msdata:UseCurrentLocale="true">
+                    <xs:complexType>
+                      <xs:choice minOccurs="0" maxOccurs="unbounded">
+                        <xs:element name="DataTableSettingsTable">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="НомерСтроки" type="xs:string" minOccurs="0" />
+                              <xs:element name="Дата" type="xs:string" minOccurs="0" />
+                              <xs:element name="Номер" type="xs:string" minOccurs="0" />
+                              <xs:element name="Дебет" type="xs:string" minOccurs="0" />
+                              <xs:element name="Кредит" type="xs:string" minOccurs="0" />
+                              <xs:element name="Разность" type="xs:string" minOccurs="0" />
+                              <xs:element name="Разногласия" type="xs:string" minOccurs="0" />
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:choice>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:schema>
+                <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" />
+              </d7p1:Table>
+            </_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i10">
+            <PropertyName>BaseDataTable</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>dt_comparisonResult2</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Таблица для хранения второго типа исключений</Text>
+        <_activityFullName>Activities.BaseCollections.DT.CreateTable</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i11" i:type="ExecutedStep">
+        <Childs />
+        <Id>5a0688d3-8ada-46b7-a306-0c19f031f4fb</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i12">
+            <PropertyName>InitialTable</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.Collections" i:type="d7p1:DataTableSettings">
+              <d7p1:Table>
+                <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+                  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="DataTableSettingsTable" msdata:UseCurrentLocale="true">
+                    <xs:complexType>
+                      <xs:choice minOccurs="0" maxOccurs="unbounded">
+                        <xs:element name="DataTableSettingsTable">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="НомерСтроки" type="xs:string" minOccurs="0" />
+                              <xs:element name="Дата" type="xs:string" minOccurs="0" />
+                              <xs:element name="Номер" type="xs:string" minOccurs="0" />
+                              <xs:element name="Дебет" type="xs:string" minOccurs="0" />
+                              <xs:element name="Кредит" type="xs:string" minOccurs="0" />
+                              <xs:element name="Разность" type="xs:string" minOccurs="0" />
+                              <xs:element name="Разногласия" type="xs:string" minOccurs="0" />
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:choice>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:schema>
+                <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" />
+              </d7p1:Table>
+            </_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i13">
+            <PropertyName>BaseDataTable</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>dt_comparisonResult3</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Таблица для хранения третьего типа исключений</Text>
+        <_activityFullName>Activities.BaseCollections.DT.CreateTable</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i14" i:type="CommentStep">
+        <Childs />
+        <Id>4d7cb0ae-81ef-413e-bb09-688b3a0d41f7</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues />
+        <SelectedOptionId i:nil="true" />
+        <Text>
+─── ⋆⋅☆⋅⋆ ── ─── ⋆⋅☆⋅⋆ ── ─── ⋆⋅☆⋅⋆ ── ─── ⋆⋅☆⋅⋆ ── ─── ⋆⋅☆⋅⋆ ── 
+</Text>
+      </AbstractStep>
+      <AbstractStep z:Id="i15" i:type="ExecutedStep">
+        <Childs>
+          <AbstractStep z:Id="i16" i:type="CommentStep">
+            <Childs />
+            <Id>1971fe03-9efc-4e52-9d34-8b51a573bc83</Id>
+            <Parent z:Ref="i15" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <Text>Бизнес исключения акт 1</Text>
+          </AbstractStep>
+          <AbstractStep z:Id="i17" i:type="ExecutedStep">
+            <Childs />
+            <Id>f3b12a6b-ce6b-4425-be3b-bd917ee1e20f</Id>
+            <Parent z:Ref="i15" />
+            <PropertyValues>
+              <PropertyValue z:Id="i18">
+                <PropertyName>Value</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>in_dt_sampleFrom.AsEnumerable()
+.Where(row1 =&gt; in_list_businessExceptions.Any(x =&gt; row1.ItemArray.Any(y =&gt; y.ToString().Contains(x.ToString()))))
+.Select(row1=&gt; 
+{
+    var row_new = dt_comparisonResult1.NewRow();
+    row_new["НомерСтроки"] = row1["НомерСтроки"].ToString();
+    row_new["Дата"] = row1["Дата"].ToString();
+    row_new["Номер"] = row1["Номер"].ToString();
+    row_new["Дебет"] = row1["Дебет"].ToString();
+    row_new["Кредит"] = row1["Кредит"].ToString();
+    row_new["Разность"] = "";
+    row_new["Разногласия"] = "Бизнес ошибка";
+    return row_new;
+}
+).CopyToDataTable()</_expression>
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+              <PropertyValue z:Id="i19">
+                <PropertyName>To</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>dt_comparisonResult1</_expression>
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Skip</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text>Получение таблицы с неправильным ключом </Text>
+            <_activityFullName>BR.Core.Base.Assign</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i20" i:type="CommentStep">
+            <Childs />
+            <Id>bdde2ff2-7749-4d7c-ba12-4c6a029f0972</Id>
+            <Parent z:Ref="i15" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <Text>Удаление из исходной таблицы строк , совпадающих с  строками из таблицы с ошибками</Text>
+          </AbstractStep>
+          <AbstractStep z:Id="i21" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i22" i:type="ExecutedStep">
+                <Childs>
+                  <AbstractStep z:Id="i23" i:type="ExecutedStep">
+                    <Childs />
+                    <Id>e0cc9bf2-c9a4-4647-ac6f-3ca4814601b1</Id>
+                    <Parent z:Ref="i22" />
+                    <PropertyValues>
+                      <PropertyValue z:Id="i24">
+                        <PropertyName>Value</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>in_dt_sampleFrom.AsEnumerable()
+.Where(row1 =&gt; false == dt_comparisonResult1.AsEnumerable()
+.Any(x =&gt; x["номер"].ToString() == row1["номер"].ToString())).CopyToDataTable()</_expression>
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                      <PropertyValue z:Id="i25">
+                        <PropertyName>To</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>in_dt_sampleFrom</_expression>
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                    </PropertyValues>
+                    <SelectedOptionId i:nil="true" />
+                    <EnableStatus>true</EnableStatus>
+                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                    <RetryCount>-1</RetryCount>
+                    <Text>Отчистка таблицы</Text>
+                    <_activityFullName>BR.Core.Base.Assign</_activityFullName>
+                  </AbstractStep>
+                </Childs>
+                <Id>4282ce36-eb0e-4796-8896-6fdd34e7db71</Id>
+                <Parent z:Ref="i21" />
+                <PropertyValues />
+                <SelectedOptionId i:nil="true" />
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i26" i:type="ExecutedStep">
+                <Childs />
+                <Id>edfb9f62-0af6-4cde-aa10-f9c294ec0e72</Id>
+                <Parent z:Ref="i21" />
+                <PropertyValues />
+                <SelectedOptionId i:nil="true" />
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.IfFalse</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>cd8fb569-66f6-4007-a83c-1f1d0735d5a2</Id>
+            <Parent z:Ref="i15" />
+            <PropertyValues>
+              <PropertyValue z:Id="i27">
+                <PropertyName>Condition</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>dt_comparisonResult1 != null</_expression>
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text>Проврка ну пустую таблицу</Text>
+            <_activityFullName>BR.Core.Base.If</_activityFullName>
+          </AbstractStep>
+        </Childs>
+        <Id>af2c0ddf-5cba-472a-adca-dac50254b5db</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues />
+        <SelectedOptionId i:nil="true" />
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Проверка на бизнес ошибку</Text>
+        <_activityFullName>BR.Core.Base.Container</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i28" i:type="ExecutedStep">
+        <Childs>
+          <AbstractStep z:Id="i29" i:type="CommentStep">
+            <Childs />
+            <Id>22663596-396b-4acb-b0f9-ea87364ba046</Id>
+            <Parent z:Ref="i28" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <Text>Сравнение первого акта со вторым используя ключ</Text>
+          </AbstractStep>
+          <AbstractStep z:Id="i30" i:type="ExecutedStep">
+            <Childs />
+            <Id>fd5a6877-b4b1-41e8-8f2a-7a4caef6e4ab</Id>
+            <Parent z:Ref="i28" />
+            <PropertyValues>
+              <PropertyValue z:Id="i31">
+                <PropertyName>Value</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>in_dt_sampleFrom.AsEnumerable()
+.Where(row1 =&gt; in_dt_sampleTo.AsEnumerable()
+.All(row2 =&gt; $"{row2["Дата"]}{row2["Номер"]}"!=$"{row1["Дата"]}{row1["Номер"]}")
+)
+.Select(row1=&gt; 
+{
+    var row_new = dt_comparisonResult2.NewRow();
+    row_new["НомерСтроки"] = row1["НомерСтроки"].ToString();
+    row_new["Дата"] = row1["Дата"].ToString();
+    row_new["Номер"] = row1["Номер"].ToString();
+    row_new["Дебет"] = row1["Дебет"].ToString();
+    row_new["Кредит"] = row1["Кредит"].ToString();
+    row_new["Разность"] = null;
+    row_new["Разногласия"] = "Этого документа не существует в сравниваемом";
+    return row_new;
+}
+).CopyToDataTable()</_expression>
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+              <PropertyValue z:Id="i32">
+                <PropertyName>To</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>dt_comparisonResult2</_expression>
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Skip</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text>Получение таблицы с неправильным ключом </Text>
+            <_activityFullName>BR.Core.Base.Assign</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i33" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i34" i:type="ExecutedStep">
+                <Childs>
+                  <AbstractStep z:Id="i35" i:type="ExecutedStep">
+                    <Childs />
+                    <Id>6dff4b4d-8e48-40aa-90f8-750c888407b3</Id>
+                    <Parent z:Ref="i34" />
+                    <PropertyValues>
+                      <PropertyValue z:Id="i36">
+                        <PropertyName>Value</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>in_dt_sampleFrom.AsEnumerable()
+.Where(row1 =&gt; false == dt_comparisonResult2.AsEnumerable()
+.Any(x =&gt; x["номер"].ToString() == row1["номер"].ToString())).CopyToDataTable()</_expression>
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                      <PropertyValue z:Id="i37">
+                        <PropertyName>To</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>in_dt_sampleFrom</_expression>
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                    </PropertyValues>
+                    <SelectedOptionId i:nil="true" />
+                    <EnableStatus>true</EnableStatus>
+                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                    <RetryCount>-1</RetryCount>
+                    <Text>Получение таблицы с неправильным ключом </Text>
+                    <_activityFullName>BR.Core.Base.Assign</_activityFullName>
+                  </AbstractStep>
+                </Childs>
+                <Id>b81ab209-217d-4ee7-bdd2-2822665fe4d9</Id>
+                <Parent z:Ref="i33" />
+                <PropertyValues />
+                <SelectedOptionId i:nil="true" />
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i38" i:type="ExecutedStep">
+                <Childs />
+                <Id>52ebe5c3-7154-400f-ad8f-73c46dbc2394</Id>
+                <Parent z:Ref="i33" />
+                <PropertyValues />
+                <SelectedOptionId i:nil="true" />
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.IfFalse</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>5a183e8c-3ccd-4d09-a66e-ad06ecc1cc45</Id>
+            <Parent z:Ref="i28" />
+            <PropertyValues>
+              <PropertyValue z:Id="i39">
+                <PropertyName>Condition</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>dt_comparisonResult2 != null</_expression>
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text>Проврка ну пустую таблицу</Text>
+            <_activityFullName>BR.Core.Base.If</_activityFullName>
+          </AbstractStep>
+        </Childs>
+        <Id>cdf76e26-e6ef-418e-adeb-4d3503b1906f</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues />
+        <SelectedOptionId i:nil="true" />
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Проверка на ключ</Text>
+        <_activityFullName>BR.Core.Base.Container</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i40" i:type="ExecutedStep">
+        <Childs>
+          <AbstractStep z:Id="i41" i:type="CommentStep">
+            <Childs />
+            <Id>1c61e0cd-b286-4866-87ac-44e81b09451d</Id>
+            <Parent z:Ref="i40" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <Text>Разность первого акта со вторым</Text>
+          </AbstractStep>
+          <AbstractStep z:Id="i42" i:type="ExecutedStep">
+            <Childs />
+            <Id>4aea0139-9be2-416a-933a-43a14f9664a6</Id>
+            <Parent z:Ref="i40" />
+            <PropertyValues>
+              <PropertyValue z:Id="i43">
+                <PropertyName>Value</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>dt_act1.AsEnumerable()
+.Where(row1 =&gt; dt_act2.AsEnumerable()
+.All(row2 =&gt; $"{row2["Дата"]}{row2["Номер"]}"!=$"{row1["Дата"]}{row1["Номер"]}")
+)
+.Select(row1=&gt; 
+{
+    var row_new = dt_comparisonResult2.NewRow();
+    row_new["НомерСтроки"] = row1["НомерСтроки"].ToString();
+    row_new["Дата"] = row1["Дата"].ToString();
+    row_new["Номер"] = row1["Номер"].ToString();
+    row_new["Дебет"] = row1["Дебет"].ToString();
+    row_new["Кредит"] = row1["Кредит"].ToString();
+    row_new["Разность"] = null;
+    row_new["Разногласия"] = "Этого документа не существует в сравниваемом";
+    return row_new;
+}
+).CopyToDataTable()</_expression>
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+              <PropertyValue z:Id="i44">
+                <PropertyName>To</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>dt_comparisonResult2</_expression>
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text>Получение таблицы с неправильным ключом </Text>
+            <_activityFullName>BR.Core.Base.Assign</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i45" i:type="CommentStep">
+            <Childs />
+            <Id>eefe2cc3-d55a-421d-bb5f-790c1502ba1a</Id>
+            <Parent z:Ref="i40" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <Text>Разность первого акта со вторым</Text>
+          </AbstractStep>
+          <AbstractStep z:Id="i46" i:type="ExecutedStep">
+            <Childs />
+            <Id>db77188f-3400-4f6e-bf30-56ae1a4d780b</Id>
+            <Parent z:Ref="i40" />
+            <PropertyValues>
+              <PropertyValue z:Id="i47">
+                <PropertyName>Value</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>dt_act2.AsEnumerable()
+.Where(row1 =&gt; dt_act1.AsEnumerable()
+.All(row2 =&gt; $"{row2["Дата"]}{row2["Номер"]}"!=$"{row1["Дата"]}{row1["Номер"]}")
+)
+.Select(row1=&gt; 
+{
+    var row_new = dt_comparisonResult2_2.NewRow();
+    row_new["НомерСтроки"] = row1["НомерСтроки"].ToString();
+    row_new["Дата"] = row1["Дата"].ToString();
+    row_new["Номер"] = row1["Номер"].ToString();
+    row_new["Дебет"] = row1["Дебет"].ToString();
+    row_new["Кредит"] = row1["Кредит"].ToString();
+    row_new["Разность"] = row1["Дебет"].ToString();
+    row_new["Разногласия"] = row1["Кредит"].ToString();
+    return row_new;
+}
+).CopyToDataTable()</_expression>
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+              <PropertyValue z:Id="i48">
+                <PropertyName>To</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>dt_comparisonResult2_2</_expression>
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text>Получение таблицы с неправильным ключом </Text>
+            <_activityFullName>BR.Core.Base.Assign</_activityFullName>
+          </AbstractStep>
+        </Childs>
+        <Id>7d2574bf-3e17-4eaf-88a5-fb8472b3cc98</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues />
+        <SelectedOptionId i:nil="true" />
+        <EnableStatus>false</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Проверка на разность</Text>
+        <_activityFullName>BR.Core.Base.Container</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i49" i:type="ExecutedStep">
+        <Childs />
+        <Id>c25286d0-b37b-46f0-9ae1-b3291b517777</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i50">
+            <PropertyName>Level</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.Core.Base" i:type="d7p1:LogLevel">Info</_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i51">
+            <PropertyName>Text</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>"выфвфы"</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text></Text>
+        <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+      </AbstractStep>
+    </Childs>
+    <Id>446cdde9-4268-4865-b7c7-ebe322f4fb1c</Id>
+    <Parent i:nil="true" />
+    <PropertyValues />
+    <SelectedOptionId i:nil="true" />
+    <EnableStatus>true</EnableStatus>
+    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+    <RetryCount>-1</RetryCount>
+    <Text></Text>
+    <_activityFullName>BR.Core.Base.Container</_activityFullName>
+  </Logic>
+  <Name>FindingErrors.pix</Name>
+  <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <Params>
+    <Parameter z:Id="i52">
+      <DefaultValueExpression></DefaultValueExpression>
+      <Description></Description>
+      <Name>in_dt_sampleFrom</Name>
+      <TypeString>System.Data.DataTable</TypeString>
+    </Parameter>
+    <Parameter z:Id="i53">
+      <DefaultValueExpression></DefaultValueExpression>
+      <Description></Description>
+      <Name>in_list_businessExceptions</Name>
+      <TypeString>System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</TypeString>
+    </Parameter>
+    <Parameter z:Id="i54">
+      <DefaultValueExpression></DefaultValueExpression>
+      <Description></Description>
+      <Name>in_dt_sampleTo</Name>
+      <TypeString>System.Data.DataTable</TypeString>
+    </Parameter>
+  </Params>
+  <TemplateVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System" i:nil="true" />
+  <Variables xmlns:d2p1="http://schemas.datacontract.org/2004/07/BR.Logic.Params" />
+  <Version i:nil="true" />
+</Script>
