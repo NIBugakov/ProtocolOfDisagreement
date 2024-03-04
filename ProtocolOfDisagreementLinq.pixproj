@@ -19,6 +19,10 @@
       <IsMain>false</IsMain>
       <Path>FindingErrors.pix</Path>
     </ProjectFileItem>
+    <ProjectFileItem z:Id="i6">
+      <IsMain>false</IsMain>
+      <Path>AdjustingInputData.pix</Path>
+    </ProjectFileItem>
   </Files>
   <MasterUploadId i:nil="true" />
   <Name>ProtocolOfDisagreementLinq</Name>
