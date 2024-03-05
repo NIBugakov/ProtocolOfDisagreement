@@ -65,50 +65,77 @@
       <AbstractStep z:Id="i10" i:type="ExecutedStep">
         <Childs>
           <AbstractStep z:Id="i11" i:type="ExecutedStep">
+            <Childs />
+            <Id>ca53943d-0cdb-43f6-8f3e-e6f2831ceb57</Id>
+            <Parent z:Ref="i10" />
+            <PropertyValues>
+              <PropertyValue z:Id="i12">
+                <PropertyName>Value</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>$"{list_cellPath.Last().Substring(0,1)}{row_wrongActs["НомерСтроки"].ToString()}"</_expression>
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+              <PropertyValue z:Id="i13">
+                <PropertyName>To</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>str_cellTarget</_expression>
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text>Получение позиции для закрашивания </Text>
+            <_activityFullName>BR.Core.Base.Assign</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i14" i:type="ExecutedStep">
             <Childs>
-              <AbstractStep z:Id="i12" i:type="ExecutedStep">
+              <AbstractStep z:Id="i15" i:type="ExecutedStep">
                 <Childs>
-                  <AbstractStep z:Id="i13" i:type="ExecutedStep">
+                  <AbstractStep z:Id="i16" i:type="ExecutedStep">
                     <Childs />
                     <Id>11e85158-908d-4fdb-a281-8b746965a108</Id>
-                    <Parent z:Ref="i12" />
+                    <Parent z:Ref="i15" />
                     <PropertyValues>
-                      <PropertyValue z:Id="i14">
+                      <PropertyValue z:Id="i17">
                         <PropertyName>Color</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>"yellow"</_expression>
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i15">
+                      <PropertyValue z:Id="i18">
                         <PropertyName>Range</PropertyName>
                         <_dataType>Expression</_dataType>
-                        <_expression>$"{list_cellPath.Last().Substring(0,1)}{row_wrongActs["НомерСтроки"].ToString()}"</_expression>
+                        <_expression>str_cellTarget</_expression>
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i16">
+                      <PropertyValue z:Id="i19">
                         <PropertyName>RowNumber</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>Convert.ToInt32(row_wrongActs["НомерСтроки"])</_expression>
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i17">
+                      <PropertyValue z:Id="i20">
                         <PropertyName>ColNumber</PropertyName>
                         <_dataType>Value</_dataType>
                         <_expression i:nil="true" />
                         <_value xmlns:d13p1="http://www.w3.org/2001/XMLSchema" i:type="d13p1:int">1</_value>
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i18">
+                      <PropertyValue z:Id="i21">
                         <PropertyName>SheetName</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>in_str_listName</_expression>
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i19">
+                      <PropertyValue z:Id="i22">
                         <PropertyName>FileName</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>in_str_pathToFile</_expression>
@@ -125,7 +152,7 @@
                   </AbstractStep>
                 </Childs>
                 <Id>73f60437-1759-4734-a7af-a4f4be62745a</Id>
-                <Parent z:Ref="i11" />
+                <Parent z:Ref="i14" />
                 <PropertyValues />
                 <SelectedOptionId i:nil="true" />
                 <EnableStatus>true</EnableStatus>
@@ -134,49 +161,49 @@
                 <Text></Text>
                 <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i20" i:type="ExecutedStep">
+              <AbstractStep z:Id="i23" i:type="ExecutedStep">
                 <Childs>
-                  <AbstractStep z:Id="i21" i:type="ExecutedStep">
+                  <AbstractStep z:Id="i24" i:type="ExecutedStep">
                     <Childs />
                     <Id>da98799f-5cee-4901-b338-82f6b9f083da</Id>
-                    <Parent z:Ref="i20" />
+                    <Parent z:Ref="i23" />
                     <PropertyValues>
-                      <PropertyValue z:Id="i22">
+                      <PropertyValue z:Id="i25">
                         <PropertyName>Color</PropertyName>
                         <_dataType>Value</_dataType>
                         <_expression i:nil="true" />
                         <_value xmlns:d13p1="http://www.w3.org/2001/XMLSchema" i:type="d13p1:string">red</_value>
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i23">
+                      <PropertyValue z:Id="i26">
                         <PropertyName>Range</PropertyName>
                         <_dataType>Expression</_dataType>
-                        <_expression>$"{list_cellPath.Last().Substring(0,1)}{row_wrongActs["НомерСтроки"].ToString()}"</_expression>
+                        <_expression>str_cellTarget</_expression>
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i24">
+                      <PropertyValue z:Id="i27">
                         <PropertyName>RowNumber</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>$"{list_cellPath.First().Substring(0,1)}{row_wrongActs["НомерСтроки"].ToString()}"</_expression>
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i25">
+                      <PropertyValue z:Id="i28">
                         <PropertyName>ColNumber</PropertyName>
                         <_dataType>Value</_dataType>
                         <_expression i:nil="true" />
                         <_value xmlns:d13p1="http://www.w3.org/2001/XMLSchema" i:type="d13p1:int">1</_value>
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i26">
+                      <PropertyValue z:Id="i29">
                         <PropertyName>SheetName</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>in_str_listName</_expression>
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i27">
+                      <PropertyValue z:Id="i30">
                         <PropertyName>FileName</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>in_str_pathToFile</_expression>
@@ -193,9 +220,9 @@
                   </AbstractStep>
                 </Childs>
                 <Id>3fa1d737-19dc-4983-93fd-e72f6747f8c1</Id>
-                <Parent z:Ref="i11" />
+                <Parent z:Ref="i14" />
                 <PropertyValues>
-                  <PropertyValue z:Id="i28">
+                  <PropertyValue z:Id="i31">
                     <PropertyName>Condition</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>row_wrongActs["Разногласия"] == "Этого документа не существует в сравниваемом"</_expression>
@@ -210,49 +237,49 @@
                 <Text></Text>
                 <_activityFullName>BR.Core.Base.ElseIf</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i29" i:type="ExecutedStep">
+              <AbstractStep z:Id="i32" i:type="ExecutedStep">
                 <Childs>
-                  <AbstractStep z:Id="i30" i:type="ExecutedStep">
+                  <AbstractStep z:Id="i33" i:type="ExecutedStep">
                     <Childs />
                     <Id>d95c38ad-3800-4048-bd5b-53a9f74d3aaf</Id>
-                    <Parent z:Ref="i29" />
+                    <Parent z:Ref="i32" />
                     <PropertyValues>
-                      <PropertyValue z:Id="i31">
+                      <PropertyValue z:Id="i34">
                         <PropertyName>Color</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>"gray"</_expression>
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i32">
+                      <PropertyValue z:Id="i35">
                         <PropertyName>Range</PropertyName>
                         <_dataType>Expression</_dataType>
-                        <_expression>$"{list_cellPath.Last().Substring(0,1)}{row_wrongActs["НомерСтроки"].ToString()}"</_expression>
+                        <_expression>str_cellTarget</_expression>
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i33">
+                      <PropertyValue z:Id="i36">
                         <PropertyName>RowNumber</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>Convert.ToInt32(row_wrongActs["НомерСтроки"])</_expression>
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i34">
+                      <PropertyValue z:Id="i37">
                         <PropertyName>ColNumber</PropertyName>
                         <_dataType>Value</_dataType>
                         <_expression i:nil="true" />
                         <_value xmlns:d13p1="http://www.w3.org/2001/XMLSchema" i:type="d13p1:int">1</_value>
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i35">
+                      <PropertyValue z:Id="i38">
                         <PropertyName>SheetName</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>in_str_listName</_expression>
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i36">
+                      <PropertyValue z:Id="i39">
                         <PropertyName>FileName</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>in_str_pathToFile</_expression>
@@ -269,9 +296,9 @@
                   </AbstractStep>
                 </Childs>
                 <Id>eff65cfa-750d-4379-802c-a62b95ed9c80</Id>
-                <Parent z:Ref="i11" />
+                <Parent z:Ref="i14" />
                 <PropertyValues>
-                  <PropertyValue z:Id="i37">
+                  <PropertyValue z:Id="i40">
                     <PropertyName>Condition</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>row_wrongActs["Разногласия"] == "Бизнес ошибка"</_expression>
@@ -286,10 +313,10 @@
                 <Text></Text>
                 <_activityFullName>BR.Core.Base.ElseIf</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i38" i:type="ExecutedStep">
+              <AbstractStep z:Id="i41" i:type="ExecutedStep">
                 <Childs />
                 <Id>5c4d2cc5-a096-4fe5-89b8-318649a68e7a</Id>
-                <Parent z:Ref="i11" />
+                <Parent z:Ref="i14" />
                 <PropertyValues />
                 <SelectedOptionId i:nil="true" />
                 <EnableStatus>true</EnableStatus>
@@ -302,7 +329,7 @@
             <Id>c739b2db-b8bf-4111-98a5-1964431365e2</Id>
             <Parent z:Ref="i10" />
             <PropertyValues>
-              <PropertyValue z:Id="i39">
+              <PropertyValue z:Id="i42">
                 <PropertyName>Condition</PropertyName>
                 <_dataType>Expression</_dataType>
                 <_expression>row_wrongActs["Разногласия"] == "Суммы не сходятся"</_expression>
@@ -321,21 +348,21 @@
         <Id>a5766244-db8b-4188-b50b-4bb3a20b81a0</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i40">
+          <PropertyValue z:Id="i43">
             <PropertyName>Collection</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>in_dt_wrongActs.Rows</_expression>
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i41">
+          <PropertyValue z:Id="i44">
             <PropertyName>Iterator</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>row_wrongActs</_expression>
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i42">
+          <PropertyValue z:Id="i45">
             <PropertyName>Counter</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression></_expression>
@@ -364,25 +391,25 @@
   <Name>AdjustingInputData.pix</Name>
   <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <Params>
-    <Parameter z:Id="i43">
+    <Parameter z:Id="i46">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>in_dt_wrongActs</Name>
       <TypeString>System.Data.DataTable</TypeString>
     </Parameter>
-    <Parameter z:Id="i44">
+    <Parameter z:Id="i47">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>in_str_pathToFile</Name>
       <TypeString>System.String</TypeString>
     </Parameter>
-    <Parameter z:Id="i45">
+    <Parameter z:Id="i48">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>in_str_listName</Name>
       <TypeString>System.String</TypeString>
     </Parameter>
-    <Parameter z:Id="i46">
+    <Parameter z:Id="i49">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>in_str_nameTargetColumn</Name>

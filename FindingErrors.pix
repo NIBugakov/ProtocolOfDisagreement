@@ -37,7 +37,7 @@
           <PropertyValue z:Id="i6">
             <PropertyName>Value</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>in_dt_sampleFrom</_expression>
+            <_expression>in_dt_sampleFrom.Copy()</_expression>
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
@@ -58,7 +58,7 @@
       </AbstractStep>
       <AbstractStep z:Id="i8" i:type="ExecutedStep">
         <Childs />
-        <Id>30f2449f-8c98-41fd-8fa4-c205017a0af1</Id>
+        <Id>fb49df6f-f477-43cc-b317-64c5fa3b92d1</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
           <PropertyValue z:Id="i9">
@@ -105,48 +105,23 @@
         <EnableStatus>true</EnableStatus>
         <ExceptionHandlingMode>Default</ExceptionHandlingMode>
         <RetryCount>-1</RetryCount>
-        <Text>Таблица для хранения первго типа исключений</Text>
+        <Text></Text>
         <_activityFullName>Activities.BaseCollections.DT.CreateTable</_activityFullName>
       </AbstractStep>
       <AbstractStep z:Id="i11" i:type="ExecutedStep">
         <Childs />
-        <Id>bd1dc6bd-9368-48f0-80f3-f374d1bbd816</Id>
+        <Id>e10b6ef6-0e56-495b-8ba2-c6b4a792a2cd</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
           <PropertyValue z:Id="i12">
-            <PropertyName>InitialTable</PropertyName>
-            <_dataType>Value</_dataType>
-            <_expression i:nil="true" />
-            <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.Collections" i:type="d7p1:DataTableSettings">
-              <d7p1:Table>
-                <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-                  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="DataTableSettingsTable" msdata:UseCurrentLocale="true">
-                    <xs:complexType>
-                      <xs:choice minOccurs="0" maxOccurs="unbounded">
-                        <xs:element name="DataTableSettingsTable">
-                          <xs:complexType>
-                            <xs:sequence>
-                              <xs:element name="НомерСтроки" type="xs:string" minOccurs="0" />
-                              <xs:element name="Дата" type="xs:string" minOccurs="0" />
-                              <xs:element name="Номер" type="xs:string" minOccurs="0" />
-                              <xs:element name="Дебет" type="xs:string" minOccurs="0" />
-                              <xs:element name="Кредит" type="xs:string" minOccurs="0" />
-                              <xs:element name="Разность" type="xs:string" minOccurs="0" />
-                              <xs:element name="Разногласия" type="xs:string" minOccurs="0" />
-                            </xs:sequence>
-                          </xs:complexType>
-                        </xs:element>
-                      </xs:choice>
-                    </xs:complexType>
-                  </xs:element>
-                </xs:schema>
-                <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" />
-              </d7p1:Table>
-            </_value>
+            <PropertyName>Value</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>out_dt_comparisonResult.Clone()</_expression>
+            <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
           <PropertyValue z:Id="i13">
-            <PropertyName>BaseDataTable</PropertyName>
+            <PropertyName>To</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>dt_comparisonResult1</_expression>
             <_value i:nil="true" />
@@ -157,48 +132,23 @@
         <EnableStatus>true</EnableStatus>
         <ExceptionHandlingMode>Default</ExceptionHandlingMode>
         <RetryCount>-1</RetryCount>
-        <Text>Таблица для хранения первго типа исключений</Text>
-        <_activityFullName>Activities.BaseCollections.DT.CreateTable</_activityFullName>
+        <Text></Text>
+        <_activityFullName>BR.Core.Base.Assign</_activityFullName>
       </AbstractStep>
       <AbstractStep z:Id="i14" i:type="ExecutedStep">
         <Childs />
-        <Id>1d789002-fa7f-4bb4-b634-2c8e75d383c0</Id>
+        <Id>b783bfaa-b435-4fbc-b979-f2f92305aaf4</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
           <PropertyValue z:Id="i15">
-            <PropertyName>InitialTable</PropertyName>
-            <_dataType>Value</_dataType>
-            <_expression i:nil="true" />
-            <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.Collections" i:type="d7p1:DataTableSettings">
-              <d7p1:Table>
-                <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-                  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="DataTableSettingsTable" msdata:UseCurrentLocale="true">
-                    <xs:complexType>
-                      <xs:choice minOccurs="0" maxOccurs="unbounded">
-                        <xs:element name="DataTableSettingsTable">
-                          <xs:complexType>
-                            <xs:sequence>
-                              <xs:element name="НомерСтроки" type="xs:string" minOccurs="0" />
-                              <xs:element name="Дата" type="xs:string" minOccurs="0" />
-                              <xs:element name="Номер" type="xs:string" minOccurs="0" />
-                              <xs:element name="Дебет" type="xs:string" minOccurs="0" />
-                              <xs:element name="Кредит" type="xs:string" minOccurs="0" />
-                              <xs:element name="Разность" type="xs:string" minOccurs="0" />
-                              <xs:element name="Разногласия" type="xs:string" minOccurs="0" />
-                            </xs:sequence>
-                          </xs:complexType>
-                        </xs:element>
-                      </xs:choice>
-                    </xs:complexType>
-                  </xs:element>
-                </xs:schema>
-                <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" />
-              </d7p1:Table>
-            </_value>
+            <PropertyName>Value</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>out_dt_comparisonResult.Clone()</_expression>
+            <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
           <PropertyValue z:Id="i16">
-            <PropertyName>BaseDataTable</PropertyName>
+            <PropertyName>To</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>dt_comparisonResult2</_expression>
             <_value i:nil="true" />
@@ -209,48 +159,23 @@
         <EnableStatus>true</EnableStatus>
         <ExceptionHandlingMode>Default</ExceptionHandlingMode>
         <RetryCount>-1</RetryCount>
-        <Text>Таблица для хранения второго типа исключений</Text>
-        <_activityFullName>Activities.BaseCollections.DT.CreateTable</_activityFullName>
+        <Text></Text>
+        <_activityFullName>BR.Core.Base.Assign</_activityFullName>
       </AbstractStep>
       <AbstractStep z:Id="i17" i:type="ExecutedStep">
         <Childs />
-        <Id>5a0688d3-8ada-46b7-a306-0c19f031f4fb</Id>
+        <Id>01938545-c69a-43fa-a3a2-60faf91b0c79</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
           <PropertyValue z:Id="i18">
-            <PropertyName>InitialTable</PropertyName>
-            <_dataType>Value</_dataType>
-            <_expression i:nil="true" />
-            <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.Collections" i:type="d7p1:DataTableSettings">
-              <d7p1:Table>
-                <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-                  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="DataTableSettingsTable" msdata:UseCurrentLocale="true">
-                    <xs:complexType>
-                      <xs:choice minOccurs="0" maxOccurs="unbounded">
-                        <xs:element name="DataTableSettingsTable">
-                          <xs:complexType>
-                            <xs:sequence>
-                              <xs:element name="НомерСтроки" type="xs:string" minOccurs="0" />
-                              <xs:element name="Дата" type="xs:string" minOccurs="0" />
-                              <xs:element name="Номер" type="xs:string" minOccurs="0" />
-                              <xs:element name="Дебет" type="xs:string" minOccurs="0" />
-                              <xs:element name="Кредит" type="xs:string" minOccurs="0" />
-                              <xs:element name="Разность" type="xs:string" minOccurs="0" />
-                              <xs:element name="Разногласия" type="xs:string" minOccurs="0" />
-                            </xs:sequence>
-                          </xs:complexType>
-                        </xs:element>
-                      </xs:choice>
-                    </xs:complexType>
-                  </xs:element>
-                </xs:schema>
-                <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" />
-              </d7p1:Table>
-            </_value>
+            <PropertyName>Value</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>out_dt_comparisonResult.Clone()</_expression>
+            <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
           <PropertyValue z:Id="i19">
-            <PropertyName>BaseDataTable</PropertyName>
+            <PropertyName>To</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>dt_comparisonResult3</_expression>
             <_value i:nil="true" />
@@ -261,8 +186,8 @@
         <EnableStatus>true</EnableStatus>
         <ExceptionHandlingMode>Default</ExceptionHandlingMode>
         <RetryCount>-1</RetryCount>
-        <Text>Таблица для хранения третьего типа исключений</Text>
-        <_activityFullName>Activities.BaseCollections.DT.CreateTable</_activityFullName>
+        <Text></Text>
+        <_activityFullName>BR.Core.Base.Assign</_activityFullName>
       </AbstractStep>
       <AbstractStep z:Id="i20" i:type="CommentStep">
         <Childs />
@@ -293,7 +218,7 @@
                 <PropertyName>Value</PropertyName>
                 <_dataType>Expression</_dataType>
                 <_expression>dt_sampleFrom.AsEnumerable()
-.Where(row1 =&gt; in_list_businessExceptions.Any(x =&gt; row1.ItemArray.Any(y =&gt; y.ToString().Contains(x.ToString()))))
+.Where(row1 =&gt; in_list_businessExceptions.Any(x =&gt; row1.ItemArray.Any(y =&gt; $"{y}".Contains($"{x}"))))
 .Select(row1=&gt; 
 {
     var row_new = dt_comparisonResult1.NewRow();
@@ -363,7 +288,7 @@
                     <EnableStatus>true</EnableStatus>
                     <ExceptionHandlingMode>Default</ExceptionHandlingMode>
                     <RetryCount>-1</RetryCount>
-                    <Text>Отчистка таблицы</Text>
+                    <Text>Удаление актов с разногласием из проверяемой таблицы </Text>
                     <_activityFullName>BR.Core.Base.Assign</_activityFullName>
                   </AbstractStep>
                   <AbstractStep z:Id="i32" i:type="ExecutedStep">
@@ -543,7 +468,7 @@
                     <EnableStatus>true</EnableStatus>
                     <ExceptionHandlingMode>Default</ExceptionHandlingMode>
                     <RetryCount>-1</RetryCount>
-                    <Text>Получение таблицы с неправильным ключом </Text>
+                    <Text>Удаление актов с разногласием из проверяемой таблицы </Text>
                     <_activityFullName>BR.Core.Base.Assign</_activityFullName>
                   </AbstractStep>
                   <AbstractStep z:Id="i49" i:type="ExecutedStep">
@@ -764,7 +689,7 @@ return (null, default(Decimal));
                     <EnableStatus>true</EnableStatus>
                     <ExceptionHandlingMode>Default</ExceptionHandlingMode>
                     <RetryCount>-1</RetryCount>
-                    <Text>Получение таблицы с неправильным ключом </Text>
+                    <Text>Удаление актов с разногласием из проверяемой таблицы </Text>
                     <_activityFullName>BR.Core.Base.Assign</_activityFullName>
                   </AbstractStep>
                   <AbstractStep z:Id="i69" i:type="ExecutedStep">
@@ -861,33 +786,6 @@ return (null, default(Decimal));
         <Text>Проверка на разность</Text>
         <_activityFullName>BR.Core.Base.Container</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i76" i:type="ExecutedStep">
-        <Childs />
-        <Id>c25286d0-b37b-46f0-9ae1-b3291b517777</Id>
-        <Parent z:Ref="i2" />
-        <PropertyValues>
-          <PropertyValue z:Id="i77">
-            <PropertyName>Level</PropertyName>
-            <_dataType>Value</_dataType>
-            <_expression i:nil="true" />
-            <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.Core.Base" i:type="d7p1:LogLevel">Info</_value>
-            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-          </PropertyValue>
-          <PropertyValue z:Id="i78">
-            <PropertyName>Text</PropertyName>
-            <_dataType>Expression</_dataType>
-            <_expression>"выфвфы"</_expression>
-            <_value i:nil="true" />
-            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-          </PropertyValue>
-        </PropertyValues>
-        <SelectedOptionId i:nil="true" />
-        <EnableStatus>true</EnableStatus>
-        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-        <RetryCount>-1</RetryCount>
-        <Text></Text>
-        <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
-      </AbstractStep>
     </Childs>
     <Id>446cdde9-4268-4865-b7c7-ebe322f4fb1c</Id>
     <Parent i:nil="true" />
@@ -902,25 +800,25 @@ return (null, default(Decimal));
   <Name>FindingErrors.pix</Name>
   <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <Params>
-    <Parameter z:Id="i79">
+    <Parameter z:Id="i76">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>in_dt_sampleFrom</Name>
       <TypeString>System.Data.DataTable</TypeString>
     </Parameter>
-    <Parameter z:Id="i80">
+    <Parameter z:Id="i77">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>in_list_businessExceptions</Name>
       <TypeString>System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</TypeString>
     </Parameter>
-    <Parameter z:Id="i81">
+    <Parameter z:Id="i78">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>in_dt_sampleTo</Name>
       <TypeString>System.Data.DataTable</TypeString>
     </Parameter>
-    <Parameter z:Id="i82">
+    <Parameter z:Id="i79">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>out_dt_comparisonResult</Name>
