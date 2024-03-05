@@ -23,6 +23,10 @@
       <IsMain>false</IsMain>
       <Path>AdjustingInputData.pix</Path>
     </ProjectFileItem>
+    <ProjectFileItem z:Id="i7">
+      <IsMain>false</IsMain>
+      <Path>ReceivingActs.pix</Path>
+    </ProjectFileItem>
   </Files>
   <MasterUploadId i:nil="true" />
   <Name>ProtocolOfDisagreementLinq</Name>
